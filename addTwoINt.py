@@ -1,12 +1,21 @@
 #!/bin/python3
 import sys
 
-def add(x,y):
-	return(x+y)
-nbr_arg=len(sys.argv)-1
-if (nbr_arg < 2):
-    print("Error")
+def add(a,b):
+	return(a+b)
 
-x = int(sys.argv[1])
-y = int(sys.argv[2])
-print(add(x,y))	
+
+def main():
+	arg=len(sys.argv)-1
+	if (arg < 2):
+		print("Error")
+		x = int(sys.argv[1])
+		y = int(input("Enter another values : "))
+		print (add(x,y))
+
+	else:
+		x= int(sys.argv[1])
+		y= int(sys.argv[2])
+		print (add(x,y))
+
+main()
